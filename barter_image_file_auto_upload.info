@@ -1,0 +1,7 @@
+name = Barter image file auto upload
+description = Barter image file auto upload
+core = 7.x
+package = Custom
+
+files[] = barter_image_file_auto_upload.install
+files[] = barter_image_file_auto_upload.module

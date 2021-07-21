@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Performs database updates and uninstallation cleanup for the Barter image file auto upload.
+ */
+
+ /**
+ * Implements hook_install().
+ */
+function barter_image_file_auto_upload_install()
+{
+	db_update('system')
+	->fields(array('weight' => 100))
+	->condition('type', 'module')
+	->condition('name', 'barter_image_file_auto_upload')
+	->execute();
+}
+
+ /**
+ * Implements hook_uninstall().
+ */
+function barter_image_file_auto_upload_uninstall()
+{
+	cache_clear_all('barter_image_file_auto_upload', 'cache', true);
+	menu_rebuild();
+}
