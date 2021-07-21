@@ -7,7 +7,11 @@
 
 $arg_0 = arg(0);
 
-if($arg_0 == 'node' || $arg_0 == 'barter')
-{
-	drupal_add_js(drupal_get_path('module', 'barter_image_file_auto_upload').'/js/barter_image_file_auto_upload.js');
+if ($arg_0 == 'node' || $arg_0 == 'barter') {
+  drupal_add_js(
+    drupal_get_path(
+      'module',
+      'barter_image_file_auto_upload'
+    ) . '/js/barter_image_file_auto_upload.js'
+  );
 }
