@@ -1,0 +1,1 @@
+# drupal7-module-barter-image-file-auto-upload
